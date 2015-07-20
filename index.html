@@ -42,7 +42,7 @@ if (req)
             // only if http status is "OK"
             if (req.status == 200)
             {                       
-                document.getElementById('cur_code').value=req.responseText;                     
+                document.getElementById('cur_code').innerHTML=req.responseText;                     
             } 
             else 
             {
@@ -60,5 +60,6 @@ if (req)
  <form style="text-align:center" method="post" action="" name="form1">
  <p>Country : <input type="text" name="country"  onChange="getCurrencyCode('code.php?country='+this.value)">
  </form>
+ <div id="cur_code"></div>
  </body>
  </html>
